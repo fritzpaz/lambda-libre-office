@@ -1,6 +1,6 @@
-# Lambda LibreOffice Conversion Service
+# Python Lambda LibreOffice Conversion Service
 
-This project contains a Lambda function that converts documents to PDF using LibreOffice. The conversion service runs inside a custom AWS Lambda Docker container. It can then be hosted on ECR and integrated with Terraform to work in a CI/CD pipeline to quickly deploy Lambdas to convert files.
+This project contains a Python Lambda function that converts documents to PDF using LibreOffice. The conversion service runs inside a custom AWS Lambda Docker container. It can then be hosted on ECR and integrated with Terraform to work in a CI/CD pipeline to quickly deploy Lambdas to convert files.
 
 ## Docker Images
 
