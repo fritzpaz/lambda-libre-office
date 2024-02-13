@@ -10,7 +10,7 @@ ENV PATH="/var/task/venv/bin:${PATH}"
 
 WORKDIR /usr/local
 # This link can be out of date. Check the latest version at https://www.libreoffice.org/download/download/
-RUN wget https://download.documentfoundation.org/libreoffice/stable/7.5.5/rpm/x86_64/LibreOffice_7.5.5_Linux_x86-64_rpm.tar.gz
+RUN wget https://download.documentfoundation.org/libreoffice/stable/7.5.8/rpm/x86_64/LibreOffice_7.5.8_Linux_x86-64_rpm.tar.gz
 RUN tar -xzf LibreOffice_7.5.5_Linux_x86-64_rpm.tar.gz
 WORKDIR /usr/local/LibreOffice_7.5.5.2_Linux_x86-64_rpm/RPMS
 RUN yum localinstall *.rpm -y
