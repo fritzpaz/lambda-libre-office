@@ -11,14 +11,14 @@ ENV PATH="/var/task/venv/bin:${PATH}"
 WORKDIR /usr/local
 # This link can be out of date. Check the latest version at https://www.libreoffice.org/download/download/
 RUN wget https://download.documentfoundation.org/libreoffice/stable/7.5.8/rpm/x86_64/LibreOffice_7.5.8_Linux_x86-64_rpm.tar.gz
-RUN tar -xzf LibreOffice_7.5.5_Linux_x86-64_rpm.tar.gz
-WORKDIR /usr/local/LibreOffice_7.5.5.2_Linux_x86-64_rpm/RPMS
+RUN tar -xzf LibreOffice_7.5.8_Linux_x86-64_rpm.tar.gz
+WORKDIR /usr/local/LibreOffice_7.5.8_Linux_x86-64_rpm/RPMS
 RUN yum localinstall *.rpm -y
-RUN rm -rf /usr/local/LibreOffice_7.5.5_Linux_x86-64_rpm.tar.gz /usr/local/LibreOffice_7.5.5.2_Linux_x86-64_rpm
+RUN rm -rf /usr/local/LibreOffice_7.5.8_Linux_x86-64_rpm.tar.gz /usr/local/LibreOffice_7.5.8_Linux_x86-64_rpm
 
 # Set environment variables for LibreOffice
-ENV PATH="/usr/local/LibreOffice_7.5.5.2_Linux_x86-64_rpm/RPMS/desktop-integration:${PATH}"
-ENV LIBREOFFICE_PATH="/usr/local/LibreOffice_7.5.5.2_Linux_x86-64_rpm/RPMS/desktop-integration"
+ENV PATH="/usr/local/LibreOffice_7.5.8_Linux_x86-64_rpm/RPMS/desktop-integration:${PATH}"
+ENV LIBREOFFICE_PATH="/usr/local/LibreOffice_7.5.8_Linux_x86-64_rpm/RPMS/desktop-integration"
 
 # THE NEXT TWO LINES ARE FOR LOCAL TESTING
 # ENTRYPOINT []
