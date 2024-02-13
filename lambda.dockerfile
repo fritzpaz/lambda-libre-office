@@ -1,14 +1,15 @@
 # TO BUILD FROM LOCALLY STORED DIRECTORY
 FROM base-image:latest
 # TO BUILD FROM ECR URL
-# FROM 138379163455.dkr.ecr.us-east-2.amazonaws.com/organizer-base-images-repository:libreoffice-base-image
+FROM 299862984411.dkr.ecr.us-west-2.amazonaws.com/microservice-docx2pdf:base
+
 
 WORKDIR ${LAMBDA_TASK_ROOT}
 
 RUN echo $(pwd)
 
 COPY main.py requirements.txt ${LAMBDA_TASK_ROOT}/
-COPY helpers ${LAMBDA_TASK_ROOT}/helpers
+#COPY helpers ${LAMBDA_TASK_ROOT}/helpers
 
 RUN PYTHON_VERSION=$(python3 --version | cut -d " " -f 2 | cut -d "." -f 1-2) && \
     pip install -r requirements.txt -t /var/lang/lib/python${PYTHON_VERSION}/site-packages/
